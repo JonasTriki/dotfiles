@@ -34,6 +34,7 @@ cask 'spotify'
 cask 'jetbrains-toolbox'
 cask 'teamviewer'
 cask 'postman'
+cask 'transmission'
 
 # Fonts
 cask 'font-lato'

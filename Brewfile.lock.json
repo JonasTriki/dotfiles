@@ -2,13 +2,13 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "ffe78a470ea3040d4ba907b19b4ad24819beb889"
+        "revision": "cc05495e4c5151e0da2f5a88c4bf697923bf99c7"
       },
       "homebrew/cask-fonts": {
-        "revision": "ba4b56a7b66d49a2b16b1c581480cd1642dc84e9"
+        "revision": "6b3397a7f78c21ee7003277e395c742bff2f8cc0"
       },
       "homebrew/cask-versions": {
-        "revision": "551c481e5ca889cd221ca44a9fb0e9a16ea8e479"
+        "revision": "1dafb753bacd17e8f7f6c70d966c6ef482c51557"
       },
       "homebrew/bundle": {
         "revision": "6f418bc7b41d9fef9ab85c47ed776ab13738cdfe"
@@ -745,6 +745,12 @@
         "options": {
           "full_name": "google-cloud-sdk"
         }
+      },
+      "transmission": {
+        "version": "3.00",
+        "options": {
+          "full_name": "transmission"
+        }
       }
     },
     "mas": {
@@ -767,7 +773,7 @@
       "ventura": {
         "HOMEBREW_VERSION": "3.6.20",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "ce0cf91727c042f13ddd85505d7e39fd8fd04b37",
+        "Homebrew/homebrew-core": "3ef0fc5946b1b963deb5002ef64a9f27c5e48888",
         "CLT": "14.2.0.0.1.1668646533",
         "Xcode": "14.2",
         "macOS": "13.2"
