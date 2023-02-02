@@ -11,15 +11,17 @@ brew 'ffmpeg'
 brew 'gh'
 brew 'git'
 brew 'grep'
+brew 'wget'
 brew 'jq'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'svn' # Needed to install fonts
-brew 'firebase-cli'
 
 # Development
 brew 'nvm'
 brew 'pyenv'
+brew 'firebase-cli'
+cask 'google-cloud-sdk'
 
 # Apps
 cask 'caffeine'
