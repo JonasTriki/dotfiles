@@ -15,9 +15,11 @@ brew 'jq'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'svn' # Needed to install fonts
+brew 'firebase-cli'
 
 # Development
 brew 'nvm'
+brew 'pyenv'
 
 # Apps
 cask 'caffeine'
@@ -26,6 +28,7 @@ cask 'docker'
 cask 'google-chrome'
 cask 'visual-studio-code'
 cask 'android-studio'
+cask 'flutter'
 
 # Fonts
 cask 'font-lato'

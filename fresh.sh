@@ -20,12 +20,8 @@ rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 source $HOME/.zshrc
 
-# Update Homebrew recipes
-brew update
-
-# Install all our dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
-brew bundle --file $DOTFILES/Brewfile
+# Install dependencies with brew
+./brew.sh
 
 # Create a Repos directory
 mkdir -p $HOME/repos
