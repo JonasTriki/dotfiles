@@ -28,7 +28,7 @@ brew tap homebrew/bundle
 brew bundle --file $DOTFILES/Brewfile
 
 # Create a Repos directory
-mkdir $HOME/repos
+mkdir -p $HOME/repos
 
 # Symlink the Mackup config file to the home directory
 rm -rf $HOME/.mackup.cfg
