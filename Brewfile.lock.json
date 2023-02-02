@@ -624,12 +624,6 @@
           "full_name": "visual-studio-code"
         }
       },
-      "android-studio": {
-        "version": "2022.1.1.20",
-        "options": {
-          "full_name": "android-studio"
-        }
-      },
       "font-lato": {
         "version": "latest",
         "options": {
@@ -676,6 +670,30 @@
         "version": "3.7.0",
         "options": {
           "full_name": "flutter"
+        }
+      },
+      "spotify": {
+        "version": "1.2.3.1115,d61a8f5c,384",
+        "options": {
+          "full_name": "spotify"
+        }
+      },
+      "jetbrains-toolbox": {
+        "version": "1.27.2,1.27.2.13801",
+        "options": {
+          "full_name": "jetbrains-toolbox"
+        }
+      },
+      "teamviewer": {
+        "version": "15.38.3",
+        "options": {
+          "full_name": "teamviewer"
+        }
+      },
+      "postman": {
+        "version": "10.8.0",
+        "options": {
+          "full_name": "postman"
         }
       }
     },

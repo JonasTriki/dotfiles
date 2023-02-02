@@ -27,8 +27,11 @@ cask 'discord'
 cask 'docker'
 cask 'google-chrome'
 cask 'visual-studio-code'
-cask 'android-studio'
 cask 'flutter'
+cask 'spotify'
+cask 'jetbrains-toolbox'
+cask 'teamviewer'
+cask 'postman'
 
 # Fonts
 cask 'font-lato'
