@@ -23,6 +23,9 @@ source $HOME/.zshrc
 # Install dependencies with brew
 ./brew.sh
 
+# Setup Git
+./git.sh
+
 # Create a Repos directory
 mkdir -p $HOME/repos
 
