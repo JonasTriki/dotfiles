@@ -19,6 +19,7 @@ brew 'mas' # Mac App Store manager
 brew 'svn' # Needed to install fonts
 
 # Development
+cask 'iterm2'
 brew 'nvm'
 brew 'pyenv'
 brew 'firebase-cli'
@@ -36,6 +37,7 @@ cask 'jetbrains-toolbox'
 cask 'teamviewer'
 cask 'postman'
 cask 'transmission'
+cask 'rectangle'
 
 # Fonts
 cask 'font-lato'
