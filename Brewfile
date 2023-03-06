@@ -17,6 +17,7 @@ brew 'jq'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'svn' # Needed to install fonts
+brew 'go'
 
 # Development
 cask 'iterm2'
