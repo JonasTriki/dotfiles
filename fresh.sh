@@ -23,6 +23,9 @@ source $HOME/.zshrc
 # Install dependencies with brew
 ./brew.sh
 
+# Create directory for NVM
+mkdir ~/.nvm
+
 # Setup Git
 ./git.sh
 
