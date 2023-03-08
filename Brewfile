@@ -25,6 +25,7 @@ brew 'nvm'
 brew 'pyenv'
 brew 'firebase-cli'
 cask 'google-cloud-sdk'
+brew 'docker-compose'
 
 # Apps
 cask 'caffeine'
