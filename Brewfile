@@ -26,6 +26,7 @@ brew 'pyenv'
 brew 'firebase-cli'
 cask 'google-cloud-sdk'
 brew 'docker-compose'
+cask 'temurin'
 
 # Apps
 cask 'caffeine'
