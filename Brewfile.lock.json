@@ -5,13 +5,13 @@
         "revision": "490cf6710fbfde70173251c59e2ee0d580d06d00"
       },
       "homebrew/cask-fonts": {
-        "revision": "4255efa23284d0050a155a512a9d02f46865b084"
+        "revision": "fc7b81ff084770ae7db4f3218f2569c4f731e335"
       },
       "homebrew/cask-versions": {
-        "revision": "fdb01c3eda6a4a0aa0e969b95931fb12d7ef469c"
+        "revision": "0da367e50c2c8f26067c6faaee2e17faffb7ca12"
       },
       "homebrew/bundle": {
-        "revision": "29ee5964f4c798d8af7f18a1b2e0f965ca00f217"
+        "revision": "4c5d4cf248f2981f66ea8988f81d6afc63edee85"
       }
     },
     "brew": {
@@ -838,7 +838,7 @@
         }
       },
       "flutter": {
-        "version": "3.7.6",
+        "version": "3.7.7",
         "options": {
           "full_name": "flutter"
         }
@@ -922,7 +922,7 @@
   "system": {
     "macos": {
       "ventura": {
-        "HOMEBREW_VERSION": "4.0.5",
+        "HOMEBREW_VERSION": "4.0.6",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "14.2.0.0.1.1668646533",
