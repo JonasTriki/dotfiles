@@ -23,6 +23,9 @@ source $HOME/.zshrc
 # Install dependencies with brew
 ./brew.sh
 
+# Install dependencies with Gem
+sudo bundle install
+
 # Create directory for NVM
 mkdir ~/.nvm
 
