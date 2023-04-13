@@ -27,6 +27,7 @@ brew 'firebase-cli'
 cask 'google-cloud-sdk'
 brew 'docker-compose'
 cask 'temurin'
+brew 'graphviz'
 
 # Apps
 cask 'caffeine'
