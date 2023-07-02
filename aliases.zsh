@@ -6,7 +6,7 @@ alias dotfiles="cd $DOTFILES"
 alias repos="cd $HOME/repos"
 
 # Git
-alias gst="git status"
+alias gs="git status"
 alias gb="git branch"
 alias gc="git checkout"
 alias amend="git add . && git commit --amend --no-edit"
