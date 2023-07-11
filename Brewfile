@@ -28,6 +28,7 @@ cask 'google-cloud-sdk'
 brew 'docker-compose'
 cask 'temurin'
 brew 'graphviz'
+brew 'fastlane'
 
 # Apps
 cask 'caffeine'
