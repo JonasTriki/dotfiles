@@ -3,6 +3,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'hashicorp/tap'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -29,6 +30,8 @@ brew 'docker-compose'
 cask 'temurin'
 brew 'graphviz'
 brew 'fastlane'
+brew 'hashicorp/tap/terraform'
+brew 'gnupg'
 
 # Apps
 cask 'caffeine'

@@ -29,6 +29,9 @@ source $HOME/.zshrc
 # Install dependencies with Gem
 sudo bundle install
 
+# Setup Terraform autocomplete
+terraform -install-autocomplete
+
 # Create directory for NVM
 mkdir ~/.nvm
 
