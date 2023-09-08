@@ -38,6 +38,9 @@ mkdir ~/.nvm
 # Setup Git
 ./git.sh
 
+# Clone Venvy
+git clone git@github.com:Napam/venvy.git $HOME/.local/src/venvy
+
 # Create a Repos directory
 mkdir -p $HOME/repos
 
