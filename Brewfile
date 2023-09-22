@@ -35,6 +35,7 @@ brew 'graphviz'
 brew 'fastlane'
 brew 'hashicorp/tap/terraform'
 brew 'gnupg'
+brew 'tflint'
 
 # Apps
 cask 'caffeine'
