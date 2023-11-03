@@ -36,6 +36,7 @@ brew 'fastlane'
 brew 'hashicorp/tap/terraform'
 brew 'gnupg'
 brew 'tflint'
+brew 'lazygit'
 
 # Apps
 cask 'caffeine'
