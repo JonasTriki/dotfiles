@@ -17,3 +17,6 @@ alias pull="git pull"
 alias push="git push"
 alias stash="git stash -u"
 alias unstage="git restore --staged ."
+
+# Lazygit
+alias lg="lazygit"
