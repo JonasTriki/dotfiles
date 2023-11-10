@@ -51,6 +51,7 @@ cask 'postman'
 cask 'transmission'
 cask 'rectangle'
 cask 'keka'
+cask 'bruno'
 
 # Fonts
 cask 'font-lato'
