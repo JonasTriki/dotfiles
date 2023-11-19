@@ -36,6 +36,7 @@ brew 'hashicorp/tap/terraform'
 brew 'gnupg'
 brew 'tflint'
 brew 'lazygit'
+brew 'apktool'
 
 # Apps
 cask 'caffeine'
