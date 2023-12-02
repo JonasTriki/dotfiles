@@ -53,6 +53,7 @@ cask 'transmission'
 cask 'rectangle'
 cask 'keka'
 cask 'bruno'
+cask 'yubico-yubikey-manager'
 
 # Fonts
 cask 'font-lato'
