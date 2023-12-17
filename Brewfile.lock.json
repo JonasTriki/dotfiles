@@ -5,7 +5,7 @@
         "revision": "d6a5c37058565b55d91ed6fdf39620eed18fa3e0"
       },
       "homebrew/cask-versions": {
-        "revision": "1785159d35f84df01fb402e4d154bb6972ac1dc1"
+        "revision": "dc98730e5c1897821d807c02771c62ce251730e1"
       },
       "homebrew/bundle": {
         "revision": "743f2aad47601c1e162f0ff05219d5a0bb15e0ad"
@@ -979,7 +979,7 @@
         }
       },
       "hashicorp/tap/terraform": {
-        "version": "1.6.2",
+        "version": "1.5.7",
         "bottle": false
       },
       "gnupg": {
@@ -1318,7 +1318,7 @@
       },
       "Xcode": {
         "id": "497799835",
-        "version": "15.0.1"
+        "version": "15.1"
       }
     }
   },
@@ -1328,9 +1328,9 @@
         "HOMEBREW_VERSION": "4.1.25",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
-        "CLT": "15.0.0.0.1.1694021235",
+        "CLT": "15.1.0.0.1.1700200546",
         "Xcode": "15.1",
-        "macOS": "14.1.2"
+        "macOS": "14.2"
       }
     }
   }
