@@ -2,10 +2,10 @@
   "entries": {
     "tap": {
       "homebrew/cask-fonts": {
-        "revision": "d6a5c37058565b55d91ed6fdf39620eed18fa3e0"
+        "revision": "001b27b116baf5a02c9d2fd12203c27b670ad3e2"
       },
       "homebrew/cask-versions": {
-        "revision": "dc98730e5c1897821d807c02771c62ce251730e1"
+        "revision": "7e19ec32a6488900f5d689db401c2c0f376d980d"
       },
       "homebrew/bundle": {
         "revision": "743f2aad47601c1e162f0ff05219d5a0bb15e0ad"
@@ -1247,7 +1247,7 @@
         }
       },
       "bruno": {
-        "version": "1.4.0",
+        "version": "1.5.0",
         "options": {
           "full_name": "bruno"
         }
