@@ -20,3 +20,6 @@ alias unstage="git restore --staged ."
 
 # Lazygit
 alias lg="lazygit"
+
+# PrettyFire
+alias pf='while read -r line; do if [[ $line =~ "^>  {\"" ]]; then echo -E ${line#">  "} | jq -C ; else echo $line; fi; done'
