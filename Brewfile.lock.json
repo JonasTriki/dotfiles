@@ -5,7 +5,7 @@
         "revision": "6f04e418dc2bbb72fc438b25de315e0d48aff286"
       },
       "homebrew/cask-versions": {
-        "revision": "b286f4277a77b7a96a4466e20ab73db517eb7921"
+        "revision": "57a383f3121c1656ac177315fa346c18f17782bd"
       },
       "homebrew/bundle": {
         "revision": "e4798d8075e1a793f065be3e5e1674ec09193d17"
@@ -979,7 +979,7 @@
         }
       },
       "hashicorp/tap/terraform": {
-        "version": "1.5.7",
+        "version": "1.6.2",
         "bottle": false
       },
       "gnupg": {
@@ -1157,7 +1157,7 @@
         }
       },
       "google-cloud-sdk": {
-        "version": "458.0.0",
+        "version": "458.0.1",
         "options": {
           "full_name": "google-cloud-sdk"
         }
@@ -1187,7 +1187,7 @@
         }
       },
       "google-chrome": {
-        "version": "120.0.6099.109",
+        "version": "120.0.6099.129",
         "options": {
           "full_name": "google-chrome"
         }
@@ -1199,7 +1199,7 @@
         }
       },
       "flutter": {
-        "version": "3.16.4",
+        "version": "3.16.5",
         "options": {
           "full_name": "flutter"
         }
@@ -1330,7 +1330,7 @@
         "Homebrew/homebrew-core": "api",
         "CLT": "15.1.0.0.1.1700200546",
         "Xcode": "15.1",
-        "macOS": "14.2"
+        "macOS": "14.2.1"
       }
     }
   }
