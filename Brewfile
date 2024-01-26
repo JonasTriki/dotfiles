@@ -37,6 +37,7 @@ brew 'gnupg'
 brew 'tflint'
 brew 'lazygit'
 brew 'apktool'
+brew 'htop'
 
 # Apps
 cask 'caffeine'
