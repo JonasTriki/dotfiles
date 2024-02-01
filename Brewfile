@@ -55,6 +55,7 @@ cask 'rectangle'
 cask 'keka'
 cask 'bruno'
 cask 'yubico-yubikey-manager'
+cask 'obsidian'
 
 # Fonts
 cask 'font-lato'
