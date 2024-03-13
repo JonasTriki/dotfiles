@@ -2,10 +2,10 @@
   "entries": {
     "tap": {
       "homebrew/cask-fonts": {
-        "revision": "a2a6ae60acabdea8c98a9a4fbc78dc0d83bc6efd"
+        "revision": "2ffb58600554a5984a3d06439418a7c494a482fb"
       },
       "homebrew/cask-versions": {
-        "revision": "6895254f7cceba5c69a48b4c55f2e48bb1ea2b88"
+        "revision": "a60b1a4f70f2107d9766582e066e7b2e9cfd61d8"
       },
       "homebrew/bundle": {
         "revision": "bb1c80baa7fac67bbffe81a2862c75a5dc7ea4a7"
@@ -1176,7 +1176,7 @@
         }
       },
       "google-cloud-sdk": {
-        "version": "467.0.0",
+        "version": "468.0.0",
         "options": {
           "full_name": "google-cloud-sdk"
         }
@@ -1206,13 +1206,13 @@
         }
       },
       "google-chrome": {
-        "version": "122.0.6261.112",
+        "version": "122.0.6261.129",
         "options": {
           "full_name": "google-chrome"
         }
       },
       "visual-studio-code": {
-        "version": "1.87.1",
+        "version": "1.87.2",
         "options": {
           "full_name": "visual-studio-code"
         }
@@ -1224,13 +1224,13 @@
         }
       },
       "spotify": {
-        "version": "1.2.32.997,4c6498b6,1708",
+        "version": "1.2.33.1039,8ddb5918,3097",
         "options": {
           "full_name": "spotify"
         }
       },
       "jetbrains-toolbox": {
-        "version": "2.2.2,2.2.2.20062",
+        "version": "2.2.3,2.2.3.20090",
         "options": {
           "full_name": "jetbrains-toolbox"
         }
@@ -1242,7 +1242,7 @@
         }
       },
       "postman": {
-        "version": "10.23.9",
+        "version": "10.24.0",
         "options": {
           "full_name": "postman"
         }
@@ -1266,7 +1266,7 @@
         }
       },
       "bruno": {
-        "version": "1.10.0",
+        "version": "1.11.0",
         "options": {
           "full_name": "bruno"
         }
@@ -1350,7 +1350,7 @@
   "system": {
     "macos": {
       "sonoma": {
-        "HOMEBREW_VERSION": "4.2.11",
+        "HOMEBREW_VERSION": "4.2.12",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.3.0.0.1.1708646388",
