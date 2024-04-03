@@ -56,6 +56,7 @@ cask 'keka'
 cask 'bruno'
 cask 'yubico-yubikey-manager'
 cask 'obsidian'
+cask 'mitmproxy'
 
 # Fonts
 cask 'font-lato'
