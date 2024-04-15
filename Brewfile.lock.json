@@ -2,16 +2,16 @@
   "entries": {
     "tap": {
       "homebrew/cask-fonts": {
-        "revision": "f969dd03f68cfd2bc4eaf068476ca5f847073a0b"
+        "revision": "199c0321a490495b58ae386b68057a2df0b8e0be"
       },
       "homebrew/cask-versions": {
-        "revision": "160ccf6b8b38fdc5fcbc25556467bcb9d58d92dc"
+        "revision": "3dca65314b5a0a7e6cd4d62aeb96a0cdae00d651"
       },
       "homebrew/bundle": {
         "revision": "f46a1db7ef9f2e017f6b01b7737e2af275270cfc"
       },
       "hashicorp/tap": {
-        "revision": "75d88d354fc36a68f829fff38024004b4648b131"
+        "revision": "3fbe15a2698fd0f22c90081d3fcb3746759efaea"
       }
     },
     "brew": {
@@ -1256,7 +1256,7 @@
         }
       },
       "bruno": {
-        "version": "1.12.3",
+        "version": "1.13.0",
         "options": {
           "full_name": "bruno"
         }
