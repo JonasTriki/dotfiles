@@ -8,7 +8,7 @@
         "revision": "057d1202c4ac9d4059909260af8d13e20fbf8cab"
       },
       "homebrew/bundle": {
-        "revision": "4ea7e7f90ad015670b7a73745ec488a373c1c393"
+        "revision": "ba4203d86f41b2db5aa0395d04e9e83952918ff3"
       },
       "hashicorp/tap": {
         "revision": "0e3e1fc26ceeffa49bb998c5d08f70e7ea5ba73c"
@@ -1204,7 +1204,7 @@
         }
       },
       "discord": {
-        "version": "0.0.306",
+        "version": "0.0.307",
         "options": {
           "full_name": "discord"
         }
@@ -1366,7 +1366,7 @@
   "system": {
     "macos": {
       "sonoma": {
-        "HOMEBREW_VERSION": "4.3.4",
+        "HOMEBREW_VERSION": "4.3.5",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.3.0.0.1.1708646388",
