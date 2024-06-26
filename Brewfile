@@ -38,6 +38,7 @@ brew 'tflint'
 brew 'lazygit'
 brew 'apktool'
 brew 'htop'
+brew 'kdoctor'
 
 # Apps
 cask 'caffeine'
