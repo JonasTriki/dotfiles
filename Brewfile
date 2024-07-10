@@ -39,6 +39,7 @@ brew 'lazygit'
 brew 'apktool'
 brew 'htop'
 brew 'kdoctor'
+brew 'pdm'
 
 # Apps
 cask 'caffeine'
