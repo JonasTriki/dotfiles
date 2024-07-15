@@ -11,7 +11,7 @@
         "revision": "55767732e0f7c96ad559acb9b07fe995da7f96c3"
       },
       "hashicorp/tap": {
-        "revision": "a872f070ff22b5a0cda13705dadba8fa4155e26f"
+        "revision": "43c257b780b420c90d017675303811159a958fd6"
       }
     },
     "brew": {
@@ -964,7 +964,7 @@
         }
       },
       "hashicorp/tap/terraform": {
-        "version": "1.5.7",
+        "version": "1.6.2",
         "bottle": false
       },
       "gnupg": {
