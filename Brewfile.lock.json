@@ -8,10 +8,10 @@
         "revision": "057d1202c4ac9d4059909260af8d13e20fbf8cab"
       },
       "homebrew/bundle": {
-        "revision": "55767732e0f7c96ad559acb9b07fe995da7f96c3"
+        "revision": "77e1d0ed28707580c7d31142040aa52486ba63eb"
       },
       "hashicorp/tap": {
-        "revision": "43c257b780b420c90d017675303811159a958fd6"
+        "revision": "e1ad59c0d48c0112d8dae9be0f4a35f9d32a82f0"
       }
     },
     "brew": {
@@ -964,7 +964,7 @@
         }
       },
       "hashicorp/tap/terraform": {
-        "version": "1.6.2",
+        "version": "1.5.7",
         "bottle": false
       },
       "gnupg": {
@@ -1267,7 +1267,7 @@
         }
       },
       "discord": {
-        "version": "0.0.310",
+        "version": "0.0.311",
         "options": {
           "full_name": "discord"
         }
@@ -1315,7 +1315,7 @@
         }
       },
       "postman": {
-        "version": "11.3.2",
+        "version": "11.4.0",
         "options": {
           "full_name": "postman"
         }
