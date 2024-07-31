@@ -11,7 +11,7 @@
         "revision": "260b3b482f39f92ccb4de1acecbb5bf081108d7c"
       },
       "hashicorp/tap": {
-        "revision": "ba11412fcd8893d4f5e5bf25a4a40c31be7abc6f"
+        "revision": "5002d7adbe1ee78be1757099e73d6a07eaa84e16"
       }
     },
     "brew": {
@@ -744,45 +744,45 @@
         }
       },
       "firebase-cli": {
-        "version": "13.14.0",
+        "version": "13.14.2",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
             "arm64_sonoma": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:03b42449982c60f78135e5efd75ee2d35aada3917d5206828f4f67ed47bae11d",
-              "sha256": "03b42449982c60f78135e5efd75ee2d35aada3917d5206828f4f67ed47bae11d"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:91b57113629a61d359c22dd981032dd2ac34fc6849f49c765838566868c49500",
+              "sha256": "91b57113629a61d359c22dd981032dd2ac34fc6849f49c765838566868c49500"
             },
             "arm64_ventura": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:03b42449982c60f78135e5efd75ee2d35aada3917d5206828f4f67ed47bae11d",
-              "sha256": "03b42449982c60f78135e5efd75ee2d35aada3917d5206828f4f67ed47bae11d"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:91b57113629a61d359c22dd981032dd2ac34fc6849f49c765838566868c49500",
+              "sha256": "91b57113629a61d359c22dd981032dd2ac34fc6849f49c765838566868c49500"
             },
             "arm64_monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:03b42449982c60f78135e5efd75ee2d35aada3917d5206828f4f67ed47bae11d",
-              "sha256": "03b42449982c60f78135e5efd75ee2d35aada3917d5206828f4f67ed47bae11d"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:91b57113629a61d359c22dd981032dd2ac34fc6849f49c765838566868c49500",
+              "sha256": "91b57113629a61d359c22dd981032dd2ac34fc6849f49c765838566868c49500"
             },
             "sonoma": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:1d416d45f64f217704db4587888704dce9473eaec8ffa8d48338e8122cc56951",
-              "sha256": "1d416d45f64f217704db4587888704dce9473eaec8ffa8d48338e8122cc56951"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:ded31ff7763ca8300496ea48ad255b349376c985d21f7f4517a5c2564091d12e",
+              "sha256": "ded31ff7763ca8300496ea48ad255b349376c985d21f7f4517a5c2564091d12e"
             },
             "ventura": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:d8f79fa50e6c2d710759a13a1941c4350a0e42ad9fb948c80121369e18344596",
-              "sha256": "d8f79fa50e6c2d710759a13a1941c4350a0e42ad9fb948c80121369e18344596"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:ded31ff7763ca8300496ea48ad255b349376c985d21f7f4517a5c2564091d12e",
+              "sha256": "ded31ff7763ca8300496ea48ad255b349376c985d21f7f4517a5c2564091d12e"
             },
             "monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:d8f79fa50e6c2d710759a13a1941c4350a0e42ad9fb948c80121369e18344596",
-              "sha256": "d8f79fa50e6c2d710759a13a1941c4350a0e42ad9fb948c80121369e18344596"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:54e74f05e41ed07e0157709050493175368832f889176001c2e0e3da9382291a",
+              "sha256": "54e74f05e41ed07e0157709050493175368832f889176001c2e0e3da9382291a"
             },
             "x86_64_linux": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:9f083f229f154a544c5371b973d232b0d29e7af2d96531ae409699e81d505cc2",
-              "sha256": "9f083f229f154a544c5371b973d232b0d29e7af2d96531ae409699e81d505cc2"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:1c5ca96a2a8e45ab3282c96b8662f8c44218e207e8d0fdb6ecaec6ab99e3dfa1",
+              "sha256": "1c5ca96a2a8e45ab3282c96b8662f8c44218e207e8d0fdb6ecaec6ab99e3dfa1"
             }
           }
         }
@@ -964,7 +964,7 @@
         }
       },
       "hashicorp/tap/terraform": {
-        "version": "1.6.2",
+        "version": "1.5.7",
         "bottle": false
       },
       "gnupg": {
@@ -1249,7 +1249,7 @@
         }
       },
       "google-cloud-sdk": {
-        "version": "485.0.0",
+        "version": "486.0.0",
         "options": {
           "full_name": "google-cloud-sdk"
         }
@@ -1267,7 +1267,7 @@
         }
       },
       "discord": {
-        "version": "0.0.312",
+        "version": "0.0.313",
         "options": {
           "full_name": "discord"
         }
@@ -1279,7 +1279,7 @@
         }
       },
       "google-chrome": {
-        "version": "127.0.6533.73",
+        "version": "127.0.6533.89",
         "options": {
           "full_name": "google-chrome"
         }
@@ -1315,7 +1315,7 @@
         }
       },
       "postman": {
-        "version": "11.5.0",
+        "version": "11.6.1",
         "options": {
           "full_name": "postman"
         }
