@@ -744,45 +744,45 @@
         }
       },
       "firebase-cli": {
-        "version": "13.15.0",
+        "version": "13.15.1",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
             "arm64_sonoma": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:58746d87a088a6dd8ee4ba036dc587af185e5e4410ef8f79a93375379bd3f021",
-              "sha256": "58746d87a088a6dd8ee4ba036dc587af185e5e4410ef8f79a93375379bd3f021"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:9bdc5820e0f76f241b7ab9a8723d82ac88db23e962059a1e12098faaa41ddd8f",
+              "sha256": "9bdc5820e0f76f241b7ab9a8723d82ac88db23e962059a1e12098faaa41ddd8f"
             },
             "arm64_ventura": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:58746d87a088a6dd8ee4ba036dc587af185e5e4410ef8f79a93375379bd3f021",
-              "sha256": "58746d87a088a6dd8ee4ba036dc587af185e5e4410ef8f79a93375379bd3f021"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:9bdc5820e0f76f241b7ab9a8723d82ac88db23e962059a1e12098faaa41ddd8f",
+              "sha256": "9bdc5820e0f76f241b7ab9a8723d82ac88db23e962059a1e12098faaa41ddd8f"
             },
             "arm64_monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:58746d87a088a6dd8ee4ba036dc587af185e5e4410ef8f79a93375379bd3f021",
-              "sha256": "58746d87a088a6dd8ee4ba036dc587af185e5e4410ef8f79a93375379bd3f021"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:9bdc5820e0f76f241b7ab9a8723d82ac88db23e962059a1e12098faaa41ddd8f",
+              "sha256": "9bdc5820e0f76f241b7ab9a8723d82ac88db23e962059a1e12098faaa41ddd8f"
             },
             "sonoma": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:f5d13d47a3347e61799ff054f4120239f989af54e990fcb972047f694987a4c4",
-              "sha256": "f5d13d47a3347e61799ff054f4120239f989af54e990fcb972047f694987a4c4"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:757beab829731c82c437293cdc5495b12ccfb9d0eddebdce0a88e532f4f2dca1",
+              "sha256": "757beab829731c82c437293cdc5495b12ccfb9d0eddebdce0a88e532f4f2dca1"
             },
             "ventura": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:f5d13d47a3347e61799ff054f4120239f989af54e990fcb972047f694987a4c4",
-              "sha256": "f5d13d47a3347e61799ff054f4120239f989af54e990fcb972047f694987a4c4"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:757beab829731c82c437293cdc5495b12ccfb9d0eddebdce0a88e532f4f2dca1",
+              "sha256": "757beab829731c82c437293cdc5495b12ccfb9d0eddebdce0a88e532f4f2dca1"
             },
             "monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:f914198615657f879fadff63dda25f81c82bba6e3846931f8be6453750e59d9c",
-              "sha256": "f914198615657f879fadff63dda25f81c82bba6e3846931f8be6453750e59d9c"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:757beab829731c82c437293cdc5495b12ccfb9d0eddebdce0a88e532f4f2dca1",
+              "sha256": "757beab829731c82c437293cdc5495b12ccfb9d0eddebdce0a88e532f4f2dca1"
             },
             "x86_64_linux": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:1b2492ddd29f71ab33a451ce21a0290223c761141a4bf434bfea08131b86281c",
-              "sha256": "1b2492ddd29f71ab33a451ce21a0290223c761141a4bf434bfea08131b86281c"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:a1f42b196ff1f5c157a360c530305a983c9a7ee03ad91431825e5641139f49a1",
+              "sha256": "a1f42b196ff1f5c157a360c530305a983c9a7ee03ad91431825e5641139f49a1"
             }
           }
         }
@@ -1243,7 +1243,7 @@
     },
     "cask": {
       "iterm2": {
-        "version": "3.5.3",
+        "version": "3.5.4",
         "options": {
           "full_name": "iterm2"
         }
