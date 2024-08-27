@@ -904,7 +904,7 @@
         }
       },
       "hashicorp/tap/terraform": {
-        "version": "1.5.7",
+        "version": "1.6.2",
         "bottle": false
       },
       "gnupg": {
@@ -1249,13 +1249,13 @@
         }
       },
       "teamviewer": {
-        "version": "15.55.3",
+        "version": "15.57.3",
         "options": {
           "full_name": "teamviewer"
         }
       },
       "postman": {
-        "version": "11.9.0",
+        "version": "11.10.0",
         "options": {
           "full_name": "postman"
         }
@@ -1279,7 +1279,7 @@
         }
       },
       "bruno": {
-        "version": "1.26.1",
+        "version": "1.26.2",
         "options": {
           "full_name": "bruno"
         }
@@ -1375,7 +1375,7 @@
   "system": {
     "macos": {
       "sonoma": {
-        "HOMEBREW_VERSION": "4.3.17",
+        "HOMEBREW_VERSION": "4.3.18",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.3.0.0.1.1708646388",
