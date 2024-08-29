@@ -40,6 +40,7 @@ brew 'apktool'
 brew 'htop'
 brew 'kdoctor'
 brew 'pdm'
+brew 'rsync'
 
 # Apps
 cask 'caffeine'
