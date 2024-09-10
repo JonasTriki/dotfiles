@@ -8,10 +8,10 @@
         "revision": "057d1202c4ac9d4059909260af8d13e20fbf8cab"
       },
       "homebrew/bundle": {
-        "revision": "753199dbccbca69fca47313750f6d2fcb38140c5"
+        "revision": "acfb8210d4366ff63fa23d6a7a8ddbacd0234532"
       },
       "hashicorp/tap": {
-        "revision": "c5e833ae957834e402f7a2fe715b1a9058d6b622"
+        "revision": "b020c074618c0cdc9f70cd08fbd41a4f97b8986f"
       }
     },
     "brew": {
@@ -529,6 +529,11 @@
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
+            "arm64_sequoia": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:f1d3ecd5e98fd66f0d1a8471b63bfac4508a3b89d2a96c4b2a87243b50866fcd",
+              "sha256": "f1d3ecd5e98fd66f0d1a8471b63bfac4508a3b89d2a96c4b2a87243b50866fcd"
+            },
             "arm64_sonoma": {
               "cellar": "/opt/homebrew/Cellar",
               "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:f1d3ecd5e98fd66f0d1a8471b63bfac4508a3b89d2a96c4b2a87243b50866fcd",
@@ -1221,7 +1226,7 @@
         }
       },
       "discord": {
-        "version": "0.0.318",
+        "version": "0.0.319",
         "options": {
           "full_name": "discord"
         }
