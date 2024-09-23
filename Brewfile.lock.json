@@ -1228,6 +1228,10 @@
             }
           }
         }
+      },
+      "withgraphite/tap/graphite": {
+        "version": "1.4.5",
+        "bottle": false
       }
     },
     "cask": {
@@ -1432,7 +1436,7 @@
         "macOS": "14.6.1"
       },
       "sequoia": {
-        "HOMEBREW_VERSION": "4.3.23",
+        "HOMEBREW_VERSION": "4.3.24",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "16.0.0.0.1.1724870825",

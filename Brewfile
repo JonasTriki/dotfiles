@@ -41,6 +41,7 @@ brew 'htop'
 brew 'kdoctor'
 brew 'pdm'
 brew 'rsync'
+brew 'withgraphite/tap/graphite'
 
 # Apps
 cask 'caffeine'
