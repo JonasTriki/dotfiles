@@ -884,7 +884,7 @@
         }
       },
       "hashicorp/tap/terraform": {
-        "version": "1.6.2",
+        "version": "1.5.7",
         "bottle": false
       },
       "gnupg": {
