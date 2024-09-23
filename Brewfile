@@ -3,6 +3,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'hashicorp/tap'
+tap 'go-task/tap'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -42,6 +43,7 @@ brew 'kdoctor'
 brew 'pdm'
 brew 'rsync'
 brew 'withgraphite/tap/graphite'
+brew 'go-task/tap/go-task'
 
 # Apps
 cask 'caffeine'

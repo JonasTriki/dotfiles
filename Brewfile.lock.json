@@ -12,6 +12,9 @@
       },
       "hashicorp/tap": {
         "revision": "a334730c42402e0001f0df1be1e71854bf27ed5d"
+      },
+      "go-task/tap": {
+        "revision": "e67229269bbe8c0a7c1716d7579ec1df3995683d"
       }
     },
     "brew": {
@@ -1231,6 +1234,10 @@
       },
       "withgraphite/tap/graphite": {
         "version": "1.4.5",
+        "bottle": false
+      },
+      "go-task/tap/go-task": {
+        "version": "3.39.2",
         "bottle": false
       }
     },
