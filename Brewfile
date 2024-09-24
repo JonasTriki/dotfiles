@@ -44,6 +44,7 @@ brew 'pdm'
 brew 'rsync'
 brew 'withgraphite/tap/graphite'
 brew 'go-task/tap/go-task'
+brew 'goose'
 
 # Apps
 cask 'caffeine'
