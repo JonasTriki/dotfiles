@@ -8,10 +8,10 @@
         "revision": "057d1202c4ac9d4059909260af8d13e20fbf8cab"
       },
       "homebrew/bundle": {
-        "revision": "8b0df4d29278e734a00121dd453fe9758e5486ed"
+        "revision": "b82ff8731cffa2725007a2d3907b3c626f954477"
       },
       "hashicorp/tap": {
-        "revision": "a334730c42402e0001f0df1be1e71854bf27ed5d"
+        "revision": "cbe6481cc4036ee92b76bedf7aac6d879601aef3"
       },
       "go-task/tap": {
         "revision": "e67229269bbe8c0a7c1716d7579ec1df3995683d"
@@ -1278,7 +1278,7 @@
         }
       },
       "google-cloud-sdk": {
-        "version": "493.0.0",
+        "version": "494.0.0",
         "options": {
           "full_name": "google-cloud-sdk"
         }
@@ -1308,7 +1308,7 @@
         }
       },
       "google-chrome": {
-        "version": "129.0.6668.59",
+        "version": "129.0.6668.71",
         "options": {
           "full_name": "google-chrome"
         }
