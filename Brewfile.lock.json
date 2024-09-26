@@ -8,10 +8,10 @@
         "revision": "057d1202c4ac9d4059909260af8d13e20fbf8cab"
       },
       "homebrew/bundle": {
-        "revision": "b82ff8731cffa2725007a2d3907b3c626f954477"
+        "revision": "a882a221ecb33f855f8a0b78adaa525926901a19"
       },
       "hashicorp/tap": {
-        "revision": "cbe6481cc4036ee92b76bedf7aac6d879601aef3"
+        "revision": "6a4cab80b070d6742b1a1a7425139c15b41c84ba"
       },
       "go-task/tap": {
         "revision": "e67229269bbe8c0a7c1716d7579ec1df3995683d"
@@ -1326,7 +1326,7 @@
         }
       },
       "spotify": {
-        "version": "1.2.45.454",
+        "version": "1.2.47.364",
         "options": {
           "full_name": "spotify"
         }
@@ -1344,7 +1344,7 @@
         }
       },
       "postman": {
-        "version": "11.13.0",
+        "version": "11.14.0",
         "options": {
           "full_name": "postman"
         }
