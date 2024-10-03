@@ -4,6 +4,7 @@ tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'hashicorp/tap'
 tap 'go-task/tap'
+tap 'withgraphite/tap'
 
 # Binaries
 brew 'bash' # Latest Bash version
