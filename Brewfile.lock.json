@@ -11,7 +11,7 @@
         "revision": "836b67f84a21deec9016253f41f994c2a98cea15"
       },
       "hashicorp/tap": {
-        "revision": "412a640c9b38e7efb85df075b7ea3735b3326277"
+        "revision": "f498d22554681be99a3beaf00ea5fb37f83d87e8"
       },
       "go-task/tap": {
         "revision": "e67229269bbe8c0a7c1716d7579ec1df3995683d"
@@ -1425,7 +1425,7 @@
         "macOS": "14.6.1"
       },
       "sequoia": {
-        "HOMEBREW_VERSION": "4.4.0",
+        "HOMEBREW_VERSION": "4.4.1",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "16.0.0.0.1.1724870825",
