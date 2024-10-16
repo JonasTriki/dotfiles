@@ -8,10 +8,10 @@
         "revision": "057d1202c4ac9d4059909260af8d13e20fbf8cab"
       },
       "homebrew/bundle": {
-        "revision": "836b67f84a21deec9016253f41f994c2a98cea15"
+        "revision": "7b8dc37ca3c79bf386b59d75076ab977731b2432"
       },
       "hashicorp/tap": {
-        "revision": "f498d22554681be99a3beaf00ea5fb37f83d87e8"
+        "revision": "b364af24367f9fbd26fc8e93d202fa0ce8785940"
       },
       "go-task/tap": {
         "revision": "e67229269bbe8c0a7c1716d7579ec1df3995683d"
@@ -1231,7 +1231,7 @@
         }
       },
       "google-cloud-sdk": {
-        "version": "496.0.0",
+        "version": "497.0.0",
         "options": {
           "full_name": "google-cloud-sdk"
         }
@@ -1261,7 +1261,7 @@
         }
       },
       "google-chrome": {
-        "version": "129.0.6668.101",
+        "version": "130.0.6723.59",
         "options": {
           "full_name": "google-chrome"
         }
@@ -1297,7 +1297,7 @@
         }
       },
       "postman": {
-        "version": "11.16.0",
+        "version": "11.17.0",
         "options": {
           "full_name": "postman"
         }
@@ -1321,7 +1321,7 @@
         }
       },
       "bruno": {
-        "version": "1.33.0",
+        "version": "1.33.1",
         "options": {
           "full_name": "bruno"
         }
