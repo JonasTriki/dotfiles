@@ -27,7 +27,7 @@ source $HOME/.zshrc
 ./brew.sh
 
 # Install dependencies with Gem
-sudo bundle install
+bundle install
 
 # Setup Terraform autocomplete
 terraform -install-autocomplete
