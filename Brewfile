@@ -66,6 +66,7 @@ cask 'yubico-yubikey-manager'
 cask 'obsidian'
 cask 'mitmproxy'
 cask 'vlc'
+cask 'scroll-reverser'
 
 # Fonts
 cask 'font-lato'
