@@ -46,6 +46,7 @@ brew 'rsync'
 brew 'withgraphite/tap/graphite'
 brew 'go-task/tap/go-task'
 brew 'goose'
+brew 'uv'
 
 # Apps
 cask 'caffeine'
