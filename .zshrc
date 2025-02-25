@@ -133,3 +133,8 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 # Venvy setup
 export VENVY_SRC_DIR="$HOME/.local/src/venvy"
 [[ -s $VENVY_SRC_DIR ]] && source "$VENVY_SRC_DIR/venvy.sh"
+
+# Enable Docker CLI completions.
+fpath=($HOME/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
