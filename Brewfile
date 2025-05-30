@@ -3,7 +3,6 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'hashicorp/tap'
 tap 'go-task/tap'
-tap 'withgraphite/tap'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -42,7 +41,6 @@ brew 'htop'
 brew 'kdoctor'
 brew 'pdm'
 brew 'rsync'
-brew 'withgraphite/tap/graphite'
 brew 'go-task/tap/go-task'
 brew 'goose'
 brew 'uv'
