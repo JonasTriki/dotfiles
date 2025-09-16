@@ -43,6 +43,7 @@ brew 'go-task/tap/go-task'
 brew 'goose'
 brew 'uv'
 brew 'helm'
+brew 'watch'
 
 # Apps
 cask 'caffeine'
