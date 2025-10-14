@@ -23,3 +23,6 @@ alias lg="lazygit"
 
 # PrettyFire
 alias pf='while read -r line; do if [[ $line =~ "^>  {\"" ]]; then echo -E ${line#">  "} | jq -C ; else echo $line; fi; done'
+
+# K8s
+alias k="kubectl"

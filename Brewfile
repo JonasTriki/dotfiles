@@ -1,6 +1,7 @@
 # Taps
 tap 'hashicorp/tap'
 tap 'go-task/tap'
+tap 'derailed/k9s'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -45,6 +46,7 @@ brew 'uv'
 brew 'helm'
 brew 'watch'
 brew 'postgresql'
+brew 'derailed/k9s/k9s'
 
 # Apps
 cask 'caffeine'
