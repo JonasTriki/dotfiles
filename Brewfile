@@ -47,6 +47,7 @@ brew 'helm'
 brew 'watch'
 brew 'postgresql'
 brew 'derailed/k9s/k9s'
+brew 'opentofu'
 
 # Apps
 cask 'caffeine'
