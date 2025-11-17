@@ -70,6 +70,7 @@ cask 'obsidian'
 cask 'mitmproxy'
 cask 'vlc'
 cask 'scroll-reverser'
+cask 'blender'
 
 # Fonts
 cask 'font-lato'
