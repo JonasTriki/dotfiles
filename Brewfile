@@ -71,6 +71,7 @@ cask 'mitmproxy'
 cask 'vlc'
 cask 'scroll-reverser'
 cask 'blender'
+cask 'dbeaver-community'
 
 # Fonts
 cask 'font-lato'
