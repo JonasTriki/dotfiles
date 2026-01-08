@@ -2,6 +2,7 @@
 tap 'hashicorp/tap'
 tap 'go-task/tap'
 tap 'derailed/k9s'
+tap 'oven-sh/bun'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -49,6 +50,7 @@ brew 'postgresql'
 brew 'derailed/k9s/k9s'
 brew 'opentofu'
 brew 'ack'
+brew 'oven-sh/bun/bun'
 
 # Apps
 cask 'caffeine'
