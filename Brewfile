@@ -74,6 +74,7 @@ cask 'vlc'
 cask 'scroll-reverser'
 cask 'blender'
 cask 'dbeaver-community'
+cask 'keepassxc'
 
 # Fonts
 cask 'font-lato'
