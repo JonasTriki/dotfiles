@@ -51,6 +51,7 @@ brew 'derailed/k9s/k9s'
 brew 'opentofu'
 brew 'ack'
 brew 'oven-sh/bun/bun'
+brew 'golangci-lint'
 
 # Apps
 cask 'caffeine'
