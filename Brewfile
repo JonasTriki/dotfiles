@@ -1,7 +1,6 @@
 # Taps
 tap 'hashicorp/tap'
 tap 'go-task/tap'
-tap 'derailed/k9s'
 tap 'oven-sh/bun'
 
 # Binaries
@@ -47,7 +46,7 @@ brew 'uv'
 brew 'helm'
 brew 'watch'
 brew 'postgresql'
-brew 'derailed/k9s/k9s'
+brew 'k9s'
 brew 'opentofu'
 brew 'ack'
 brew 'oven-sh/bun/bun'
