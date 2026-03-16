@@ -50,6 +50,7 @@ brew 'k9s'
 brew 'opentofu'
 brew 'ack'
 brew 'oven-sh/bun/bun'
+brew 'anomalyco/tap/opencode'
 
 # Apps
 cask 'caffeine'
@@ -74,6 +75,7 @@ cask 'scroll-reverser'
 cask 'blender'
 cask 'dbeaver-community'
 cask 'keepassxc'
+cask 'opencode-desktop'
 
 # Fonts
 cask 'font-lato'
