@@ -59,6 +59,7 @@ brew 'colima'
 # Apps
 cask 'caffeine'
 cask 'discord'
+cask 'docker-desktop'
 cask 'google-chrome'
 cask 'visual-studio-code'
 cask 'flutter'
