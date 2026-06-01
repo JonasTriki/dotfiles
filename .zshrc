@@ -11,7 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="afowler"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,12 +75,28 @@ ZSH_CUSTOM=$DOTFILES
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  brew
+  common-aliases
+  node
+  npm
+  rand-quote
+  sudo
+  yarn
+  z
+  colored-man-pages
+  colorize
+  cp
+  zsh-syntax-highlighting
   zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# Activate Pure
+autoload -U promptinit; promptinit
+prompt pure
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -129,10 +145,6 @@ export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
-# Venvy setup
-export VENVY_SRC_DIR="$HOME/.local/src/venvy"
-[[ -s $VENVY_SRC_DIR ]] && source "$VENVY_SRC_DIR/venvy.sh"
 
 # Enable Docker CLI completions.
 fpath=($HOME/.docker/completions $fpath)

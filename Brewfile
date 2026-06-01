@@ -52,11 +52,13 @@ brew 'ack'
 brew 'oven-sh/bun/bun'
 brew 'anomalyco/tap/opencode'
 brew 'kotlin'
+brew 'pure'
+brew 'z'
+brew 'colima'
 
 # Apps
 cask 'caffeine'
 cask 'discord'
-cask 'docker-desktop'
 cask 'google-chrome'
 cask 'visual-studio-code'
 cask 'flutter'
@@ -83,6 +85,7 @@ cask 'font-source-code-pro'
 cask 'font-source-sans-3'
 cask 'font-source-serif-4'
 cask 'font-fira-code'
+cask 'font-fira-mono'
 
 # Mac App Store
 mas 'Keynote', id: 409183694
