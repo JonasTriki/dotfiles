@@ -159,3 +159,9 @@ if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/op
 
 # Kubectl autocompletion
 source <(kubectl completion zsh)
+
+# Activate Mise
+eval "$(mise activate zsh)"
+
+# Add .local/bin to path for Claude Code
+export PATH="$HOME/.local/bin:$PATH"

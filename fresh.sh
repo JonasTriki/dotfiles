@@ -28,7 +28,7 @@ source $HOME/.zshrc
 ./brew.sh
 
 # Install dependencies with Gem
-# bundle install
+bundle install
 
 # Setup Terraform autocomplete
 terraform -install-autocomplete
@@ -39,12 +39,15 @@ mkdir ~/.nvm
 # Setup Git
 ./git.sh
 
+# Install Claude Code
+curl -fsSL https://claude.ai/install.sh | bash
+
 # Create a Repos directory
 mkdir -p $HOME/repos
 
 # Symlink the Mackup config file to the home directory
-# rm -rf $HOME/.mackup.cfg
-# ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
+rm -rf $HOME/.mackup.cfg
+ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source $DOTFILES/.macos
