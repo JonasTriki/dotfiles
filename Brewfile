@@ -1,7 +1,7 @@
 # Taps
-tap 'hashicorp/tap'
-tap 'go-task/tap'
-tap 'oven-sh/bun'
+tap 'hashicorp/tap', trusted: true
+tap 'go-task/tap', trusted: true
+tap 'oven-sh/bun', trusted: true
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -50,7 +50,7 @@ brew 'k9s'
 brew 'opentofu'
 brew 'ack'
 brew 'oven-sh/bun/bun'
-brew 'anomalyco/tap/opencode'
+brew 'anomalyco/tap/opencode', trusted: true
 brew 'kotlin'
 brew 'ktlint'
 brew 'pure'
@@ -60,6 +60,7 @@ brew 'mise'
 brew 'gradle'
 brew 'kubectl'
 brew 'sops'
+brew 'stripe'
 
 # Apps
 cask 'caffeine'
@@ -81,6 +82,7 @@ cask 'scroll-reverser'
 cask 'dbeaver-community'
 cask 'opencode-desktop'
 cask '1password-cli'
+cask 'codeql'
 
 # Fonts
 cask 'font-lato'

@@ -22,6 +22,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ln -s $HOME/.dotfiles/.zshrc-private $HOME/.zshrc-private
 source $HOME/.zshrc
 
 # Install dependencies with brew
@@ -48,6 +49,9 @@ mkdir -p $HOME/repos
 # Symlink the Mackup config file to the home directory
 rm -rf $HOME/.mackup.cfg
 ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
+
+# Symlink the Colima socket to the home directory
+sudo ln -sf $HOME/.colima/default/docker.sock /var/run/docker.sock
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source $DOTFILES/.macos

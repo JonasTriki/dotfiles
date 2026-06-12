@@ -165,3 +165,6 @@ eval "$(mise activate zsh)"
 
 # Add .local/bin to path for Claude Code
 export PATH="$HOME/.local/bin:$PATH"
+
+# Include private .zshrc
+[[ -f ~/.zshrc-private ]] && source ~/.zshrc-private
