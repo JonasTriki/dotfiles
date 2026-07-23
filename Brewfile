@@ -85,6 +85,7 @@ cask 'dbeaver-community'
 cask 'opencode-desktop'
 cask '1password-cli'
 cask 'codeql'
+cask 'redis-insight'
 
 # Fonts
 cask 'font-lato'
