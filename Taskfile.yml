@@ -1,136 +1,40 @@
 version: '3'
 
-vars:
-  DOTFILES:
-    sh: pwd
-
-env:
-  DOTFILES: '{{.DOTFILES}}'
-
 tasks:
   default:
-    desc: List the available tasks
     silent: true
     cmds:
       - task --list
-
-  # --- chezmoi --------------------------------------------------------------
-
-  diff:
-    desc: Show what `task apply` would change in $HOME
-    cmds:
-      - chezmoi diff
 
   apply:
     desc: Apply the dotfiles to $HOME
     cmds:
       - chezmoi apply
 
-  managed:
-    desc: List every path chezmoi manages
+  diff:
+    desc: Show what `task apply` would change
     cmds:
-      - chezmoi managed
-
-  externals:
-    desc: Force-refresh the zsh plugins from .chezmoiexternal.toml
-    cmds:
-      - chezmoi apply --refresh-externals
-
-  doctor:
-    desc: Check the chezmoi installation for problems
-    cmds:
-      - chezmoi doctor
-
-  # --- provisioning ---------------------------------------------------------
-
-  fresh:
-    desc: Bootstrap this machine from scratch (idempotent, safe to re-run)
-    cmds:
-      - ./scripts/fresh.sh
+      - chezmoi diff
 
   brew:
-    desc: Install/update the Brewfile, plus Brewfile.private if present
+    desc: Install the Brewfile and Brewfile.private
     cmds:
       - ./scripts/brew.sh
 
-  # The three tasks below read Brewfile + Brewfile.private as one bundle on
-  # stdin. Checking Brewfile alone would treat every work package as drift, and
-  # brew:prune would uninstall them.
-
-  # --no-upgrade: report what's missing, not what's outdated. Otherwise an App
-  # Store update that `mas` can't install (Outlook, Slack) fails the check.
-  brew:check:
-    desc: Report Brewfile(s) entries that are not installed
-    cmds:
-      - cat Brewfile Brewfile.private 2>/dev/null | brew bundle check --no-upgrade --verbose --file=-
-
-  brew:drift:
-    desc: Report packages installed here but missing from the Brewfile(s)
-    cmds:
-      - cat Brewfile Brewfile.private 2>/dev/null | brew bundle cleanup --file=-
-
-  brew:prune:
-    desc: Uninstall everything not declared in the Brewfile(s) (destructive)
-    prompt: This uninstalls every package, cask and MAS app not in Brewfile or Brewfile.private. Continue?
-    cmds:
-      - cat Brewfile Brewfile.private 2>/dev/null | brew bundle cleanup --force --file=-
-
-  macos:
-    desc: Apply macOS defaults (restarts Finder, Dock and friends)
-    cmds:
-      - ./scripts/macos.sh
-
   update:
-    desc: Update Homebrew packages, zsh plugins, Oh My Zsh and mise runtimes
+    desc: Update packages, zsh plugins, Oh My Zsh and runtimes
     cmds:
       - task: brew
-      - task: externals
+      - chezmoi apply --refresh-externals
       - mise upgrade
       - zsh -ic 'omz update'
 
-  clean:
-    desc: Free disk space used by stale Homebrew downloads and old versions
+  macos:
+    desc: Apply macOS defaults
     cmds:
-      - brew cleanup --prune=all
+      - ./scripts/macos.sh
 
-  # --- checks ---------------------------------------------------------------
-
-  lint:
-    desc: Shellcheck the shell scripts and check they are executable
+  fresh:
+    desc: Bootstrap a new Mac
     cmds:
-      - shellcheck -s bash scripts/*.sh
-      # These are executed, not sourced, so a missing exec bit is a runtime
-      # "permission denied".
-      - |
-        status=0
-        for f in scripts/*.sh; do
-          [ -x "$f" ] || { echo "NOT EXECUTABLE: $f"; status=1; }
-          case "$(git ls-files --stage -- "$f" | cut -d' ' -f1)" in
-            100755|'') ;;
-            *) echo "NOT EXECUTABLE IN GIT: $f"; status=1 ;;
-          esac
-        done
-        [ "$status" -eq 0 ] && echo "OK: all scripts executable."
-        exit "$status"
-
-  secrets:
-    desc: Verify no private file is tracked by git
-    silent: true
-    cmds:
-      - |
-        status=0
-        for f in .zshrc-private aliases-private.zsh Brewfile.private \
-                 gitconfig-private gitconfig-work; do
-          if git ls-files --error-unmatch "$f" >/dev/null 2>&1; then
-            echo "TRACKED: $f"
-            status=1
-          fi
-        done
-        if [ "$status" -eq 0 ]; then echo "OK: no private files are tracked."; fi
-        exit "$status"
-
-  startup:
-    desc: Measure zsh startup time over 5 runs
-    silent: true
-    cmds:
-      - for i in 1 2 3 4 5; do /usr/bin/time zsh -i -c exit 2>&1 | tail -1; done
+      - ./scripts/fresh.sh

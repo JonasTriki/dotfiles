@@ -1,118 +1,105 @@
-# Shared between the personal and the work Mac. Work-only packages go in the
-# gitignored Brewfile.private. Check for drift with `task brew:check`.
+# Work-only packages go in the gitignored Brewfile.private.
 
-# Taps
 tap 'hashicorp/tap', trusted: true
 tap 'oven-sh/bun', trusted: true
 
-# Binaries
-brew 'bash' # Latest Bash version
+# CLI
+brew 'bash'
 brew 'bat'
+brew 'chezmoi'
+brew 'fd'
 brew 'ffmpeg'
+brew 'fzf'
 brew 'gh'
 brew 'git'
 brew 'git-lfs'
+brew 'gnupg'
+brew 'go-task'
 brew 'grep'
-brew 'ripgrep' # `rg` — gitignore-aware recursive content search
-brew 'fd' # gitignore-aware filename search
-brew 'fzf' # Ctrl+R fuzzy history / Ctrl+T fuzzy file insert
-brew 'wget'
+brew 'htop'
 brew 'jq'
-brew 'chezmoi' # Dotfile manager
-brew 'mas' # Mac App Store manager
+brew 'lazygit'
+brew 'mas'
+brew 'pure'
+brew 'ripgrep'
+brew 'rsync'
 brew 'shellcheck'
-brew 'go'
+brew 'watch'
+brew 'wget'
 
 # Development
-cask 'iterm2'
-brew 'mise' # Runtime version manager (node, python, java, ...)
-brew 'cocoapods'
-brew 'firebase-cli'
-cask 'gcloud-cli'
+brew 'ack'
+brew 'anomalyco/tap/opencode-v2', trusted: true
+brew 'apktool'
 brew 'cloud-sql-proxy'
-cask 'azure-cli' # Moved from homebrew-core to a cask in 2026
+brew 'cocoapods'
+brew 'colima'
 brew 'docker'
+brew 'docker-buildx'
 brew 'docker-compose'
 brew 'docker-credential-helper'
-brew 'colima'
-brew 'docker-buildx'
-brew 'graphviz'
 brew 'fastlane'
-brew 'hashicorp/tap/terraform'
-brew 'opentofu' # Alongside terraform: tofu for new work, terraform for existing
-brew 'gnupg'
-brew 'lazygit'
-brew 'apktool'
-brew 'htop'
-brew 'kdoctor'
-brew 'pdm'
-brew 'uv'
-brew 'rsync'
-brew 'go-task'
+brew 'firebase-cli'
+brew 'go'
 brew 'goose'
+brew 'gradle'
+brew 'graphviz'
+brew 'hashicorp/tap/terraform'
 brew 'helm'
-brew 'watch'
-brew 'postgresql@18' # Pinned: the `postgresql` alias silently follows new majors
-brew 'kubectl'
 brew 'k9s'
-brew 'ack'
-brew 'oven-sh/bun/bun'
-brew 'anomalyco/tap/opencode-v2', trusted: true
+brew 'kdoctor'
 brew 'kotlin'
 brew 'ktlint'
-brew 'gradle'
+brew 'kubectl'
+brew 'mise'
+brew 'opentofu'
+brew 'oven-sh/bun/bun'
+brew 'pdm'
+brew 'postgresql@18'
 brew 'sops'
 brew 'stripe'
-
-# No trash formula: the `rm` wrapper uses macOS 26's built-in /usr/bin/trash,
-# which the Homebrew alternatives collide with.
-
-# Zsh
-brew 'pure' # Prompt
-# No `z` formula: the oh-my-zsh `z` plugin bundles its own implementation.
+brew 'uv'
+cask 'azure-cli'
+cask 'gcloud-cli'
 
 # Apps
-cask 'caffeine'
-cask 'discord'
-cask 'google-chrome'
-cask 'visual-studio-code'
-cask 'zed'
-cask 'flutter'
-cask 'jetbrains-toolbox'
-cask 'transmission'
-cask 'rectangle'
-cask 'keka'
-cask 'bruno'
-cask 'yubico-authenticator'
-cask 'obsidian'
-cask 'mitmproxy'
-cask 'vlc'
-cask 'scroll-reverser'
-cask 'dbeaver-community'
-cask 'opencode-desktop'
 cask '1password'
 cask '1password-cli'
+cask 'bruno'
+cask 'caffeine'
 cask 'codeql'
+cask 'dbeaver-community'
+cask 'discord'
+cask 'flutter'
+cask 'google-chrome'
+cask 'iterm2'
+cask 'jetbrains-toolbox'
+cask 'keka'
+cask 'mitmproxy'
+cask 'obsidian'
+cask 'opencode-desktop'
+cask 'rectangle'
 cask 'redis-insight'
+cask 'scroll-reverser'
+cask 'transmission'
+cask 'visual-studio-code'
+cask 'vlc'
+cask 'yubico-authenticator'
+cask 'zed'
 
 # Fonts
+cask 'font-fira-code'
+cask 'font-fira-mono'
 cask 'font-lato'
 cask 'font-open-sans'
 cask 'font-roboto'
-cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
+cask 'font-source-code-pro-for-powerline'
 cask 'font-source-sans-3'
 cask 'font-source-serif-4'
-cask 'font-fira-code'
-cask 'font-fira-mono'
 
 # Mac App Store
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Xcode', id: 497799835
-
-# Installed but not declared here, so a fresh machine needs them by hand:
-#   Slack                       MAS copy; `mas` can't reinstall it
-#   Microsoft 365, OneDrive,    present on one machine only
-#   GarageBand, iMovie

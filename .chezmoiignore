@@ -1,16 +1,11 @@
-# Repo files that must NOT be applied to $HOME. Patterns match target paths.
-# Source names beginning with "." are ignored by chezmoi automatically.
-
 README.md
 LICENSE
 Taskfile.yml
-
 Brewfile
 Brewfile.private
 Brewfile.lock.json
 scripts
 init
-
-# Private overrides, sourced by absolute path out of the repo
 aliases-private.zsh
 gitconfig-private
+gitconfig-work
