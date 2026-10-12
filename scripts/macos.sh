@@ -2,9 +2,12 @@
 
 # Heavily inspired by https://github.com/driesvints/dotfiles/blob/main/.macos - thanks Dries Vints!
 
-# Close any open System Preferences panes, to prevent them from overriding
-# settings we’re about to change
-osascript -e 'tell application "System Preferences" to quit'
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Close any open Settings panes, to prevent them from overriding settings we’re
+# about to change. Renamed to "System Settings" in macOS 13 (Ventura).
+osascript -e 'tell application "System Settings" to quit' 2>/dev/null
+osascript -e 'tell application "System Preferences" to quit' 2>/dev/null
 
 # Ask for the administrator password upfront
 sudo -v
@@ -36,9 +39,6 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# Disable the “Are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
@@ -62,9 +62,6 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
-# Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
-
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
@@ -77,18 +74,20 @@ defaults write NSGlobalDomain AppleLocale -string "nb_NO@currency=NOK"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
-# Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "Europe/Oslo" > /dev/null
+# Set the timezone; see `sudo systemsetup -listtimezones` for other values.
+#
+# Read the current zone from /etc/localtime rather than `systemsetup
+# -gettimezone`, which needs sudo. Skipping the write on re-runs also avoids
+# systemsetup's spurious "### Error:-99 ... InternetServices.m" on stderr, which
+# it logs even when the call succeeds — so that one line is filtered rather than
+# hiding all output and with it any genuine failure.
+if [[ "$(readlink /etc/localtime)" != */Europe/Oslo ]]; then
+    sudo systemsetup -settimezone "Europe/Oslo" 2>&1 | grep -vF 'InternetServices.m' || true
+fi
 
 ###############################################################################
 # Energy saving                                                               #
 ###############################################################################
-
-# Enable lid wakeup
-sudo pmset -a lidwake 1
-
-# Restart automatically on power loss
-sudo pmset -a autorestart 1
 
 # Sleep the display after 5 minutes on battery
 sudo pmset -b displaysleep 5
@@ -101,18 +100,6 @@ sudo pmset -c sleep 0
 
 # Set machine sleep to 5 minutes on battery
 sudo pmset -b sleep 5
-
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
-
-# Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
-
-# Hibernation mode
-# 0: Disable hibernation (speeds up entering sleep mode)
-# 3: Copy RAM to disk so the system state can still be restored in case of a
-#    power failure.
-sudo pmset -a hibernatemode 3
 
 ###############################################################################
 # Screen                                                                      #
@@ -145,10 +132,14 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
-# Enable snap-to-grid for icons on the desktop and in other icon views
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+# Enable snap-to-grid for icons on the desktop and in other icon views.
+# `Set` fails on a fresh install where the keys don't exist yet, so fall back to
+# `Add` and keep going either way.
+for view in DesktopViewSettings FK_StandardViewSettings StandardViewSettings; do
+    /usr/libexec/PlistBuddy -c "Set :${view}:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null ||
+        /usr/libexec/PlistBuddy -c "Add :${view}:IconViewSettings:arrangeBy string grid" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null ||
+        true
+done
 
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
@@ -168,23 +159,38 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Safari & WebKit                                                             #
 ###############################################################################
 
-# Privacy: don’t send search queries to Apple
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+# Safari's preferences live inside its sandbox container
+# (~/Library/Containers/com.apple.Safari/...) and are protected by SIP. Every
+# `defaults write` below fails with "Could not write domain ...; exiting" unless
+# the terminal running this script has Full Disk Access.
+#
+# Probe once and skip the whole block with a single message, rather than emitting
+# eight identical errors. Safari is the only protected domain used in this file.
+if defaults write com.apple.Safari .macosWriteProbe -bool true 2>/dev/null; then
+    defaults delete com.apple.Safari .macosWriteProbe 2>/dev/null
 
-# Show the full URL in the address bar (note: this still hides the scheme)
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+    # Privacy: don’t send search queries to Apple
+    defaults write com.apple.Safari UniversalSearchEnabled -bool false
+    defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 
-# Enable the Develop menu and the Web Inspector in Safari
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+    # Show the full URL in the address bar (note: this still hides the scheme)
+    defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
-# Warn about fraudulent websites
-defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
+    # Enable the Develop menu and the Web Inspector in Safari
+    defaults write com.apple.Safari IncludeDevelopMenu -bool true
+    defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+    defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
-# Update extensions automatically
-defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
+    # Warn about fraudulent websites
+    defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
+
+    # Update extensions automatically
+    defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
+else
+    echo "Skipping Safari settings: com.apple.Safari is not writable."
+    echo "  Grant Full Disk Access to your terminal in System Settings →"
+    echo "  Privacy & Security → Full Disk Access, then re-run 'task macos'."
+fi
 
 ###############################################################################
 # Mail                                                                        #
@@ -279,8 +285,11 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 # Rectangle.app                                                               #
 ###############################################################################
 
-# Set up my preferred keyboard shortcuts
-cp -r init/rectangle.json ~/Library/Application\ Support/Rectangle/RectangleConfig.json 2> /dev/null
+# Set up my preferred keyboard shortcuts. Rectangle's support directory does
+# not exist until the app has launched once.
+mkdir -p "$HOME/Library/Application Support/Rectangle"
+cp "$DOTFILES/init/rectangle.json" \
+    "$HOME/Library/Application Support/Rectangle/RectangleConfig.json"
 
 ###############################################################################
 # Transmission.app                                                            #

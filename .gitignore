@@ -1,4 +1,30 @@
 .DS_Store
-plugins
-aliases-private.zsh
+
+# --- Private overrides ------------------------------------------------------
+# Never committed. Each also has a counterpart in .chezmoiignore, or is
+# dot-prefixed, so chezmoi doesn't install it into $HOME either.
+#
+# gitignore has no trailing-comment syntax: a comment after a pattern becomes
+# part of the pattern, so keep every comment on its own line.
+
+# Env vars, secrets, work tooling
 .zshrc-private
+
+# Work aliases and functions
+aliases-private.zsh
+
+# Work-only Homebrew packages and MAS apps
+Brewfile.private
+
+# Git identity and work includeIf rules
+gitconfig-private
+gitconfig-work
+
+# --- Generated --------------------------------------------------------------
+
+# Written by `brew bundle install`; not used for pinning, so pure churn
+Brewfile.lock.json
+
+# Tool-local state
+.claude/
+.opencode/

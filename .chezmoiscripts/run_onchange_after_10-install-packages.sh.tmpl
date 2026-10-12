@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#
+# Re-runs scripts/brew.sh whenever a Brewfile changes. The hashes below are
+# comments, but chezmoi diffs them to decide whether to re-run this script.
+#
+# Brewfile:         {{ include "Brewfile" | sha256sum }}
+{{  if stat (joinPath .chezmoi.sourceDir "Brewfile.private") -}}
+# Brewfile.private: {{ include "Brewfile.private" | sha256sum }}
+{{ else -}}
+# Brewfile.private: absent
+{{ end -}}
+
+set -euo pipefail
+
+if ! command -v brew >/dev/null 2>&1; then
+  echo "Homebrew not installed yet; skipping brew bundle." >&2
+  exit 0
+fi
+
+exec {{ printf "%s/scripts/brew.sh" .chezmoi.sourceDir | quote }}

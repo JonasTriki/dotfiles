@@ -1,0 +1,93 @@
+# Managed by chezmoi: edit dot_zshrc in ~/.dotfiles, then run `chezmoi apply`.
+# Work-related, machine-specific and secret settings belong in the gitignored
+# private files sourced at the bottom.
+
+export DOTFILES="$HOME/.dotfiles"
+
+# --- Homebrew ---------------------------------------------------------------
+
+# ~/.zprofile covers login shells; repeat it so a plain `zsh` spawned from
+# another shell also gets $HOMEBREW_PREFIX and brew's site-functions on $fpath.
+if [[ -z "$HOMEBREW_PREFIX" && -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# --- Oh My Zsh --------------------------------------------------------------
+
+export ZSH="$HOME/.oh-my-zsh"
+
+# Oh My Zsh sources every $ZSH_CUSTOM/*.zsh, which is how aliases.zsh and
+# path.zsh get loaded. plugins/ is cloned here by .chezmoiexternal.toml.
+ZSH_CUSTOM="$HOME/.config/zsh"
+
+export ZSH_CACHE_DIR="$HOME/.cache/oh-my-zsh"
+[[ -d "$ZSH_CACHE_DIR/completions" ]] || mkdir -p "$ZSH_CACHE_DIR/completions"
+
+ZSH_THEME=""            # the pure prompt is set up below
+HIST_STAMPS="dd/mm/yyyy"
+zstyle ':omz:update' mode reminder
+
+# Every plugin here is sourced on every new shell, so add wisely.
+plugins=(
+  git
+  brew
+  colored-man-pages
+  colorize
+  cp
+  fzf
+  sudo
+  z
+
+  mise
+  node
+  npm
+  yarn
+
+  docker
+  gcloud
+  kubectl
+  terraform
+
+  # Keep these two last and in this order: zsh-syntax-highlighting must be
+  # sourced after everything that defines widgets.
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+
+source "$ZSH/oh-my-zsh.sh"
+
+# --- Prompt -----------------------------------------------------------------
+
+autoload -U promptinit && promptinit
+prompt pure
+
+# --- Locale -----------------------------------------------------------------
+
+# English messages with Norwegian dates/units/currency. LC_ALL stays unset:
+# forcing a non-English locale on every category gives tools a comma decimal
+# separator and locale-dependent collation, which breaks scripts parsing them.
+export LANG=en_US.UTF-8
+export LC_TIME=nb_NO.UTF-8
+export LC_MEASUREMENT=nb_NO.UTF-8
+export LC_MONETARY=nb_NO.UTF-8
+unset LC_ALL
+
+# --- Editor -----------------------------------------------------------------
+
+# --wait blocks until the buffer is closed, which git and `fc` rely on.
+if [[ -n "$SSH_CONNECTION" ]] || ! command -v zed >/dev/null 2>&1; then
+  export EDITOR='vim'
+else
+  export EDITOR='zed --wait'
+fi
+export VISUAL="$EDITOR"
+
+# --- Private overrides ------------------------------------------------------
+
+# Gitignored, so nothing work-related is committed. Sourced last so they can
+# override anything above, and kept out of $ZSH_CUSTOM so Oh My Zsh's glob
+# can't pick them up out of order.
+for private_file in "$DOTFILES/.zshrc-private" "$DOTFILES/aliases-private.zsh"; do
+  [[ -r "$private_file" ]] && source "$private_file"
+done
+unset private_file
