@@ -53,6 +53,10 @@ sudo pmset -c sleep 0
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
+# --- Dock
+
+defaults write com.apple.dock appswitcher-dock-display -bool true
+
 # --- Finder
 
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
