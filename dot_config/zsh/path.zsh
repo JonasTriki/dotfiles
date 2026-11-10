@@ -1,6 +1,7 @@
 path=("$HOME/.local/bin" $path)
 [[ -d "$DOTFILES/bin" ]] && path=("$DOTFILES/bin" $path)
 [[ -d "$HOME/.pub-cache/bin" ]] && path+=("$HOME/.pub-cache/bin")
+[[ -d "$HOME/go/bin" ]] && path+=("$HOME/go/bin")
 
 if [[ -d "$HOME/Library/Android/sdk" ]]; then
   export ANDROID_HOME="$HOME/Library/Android/sdk"
